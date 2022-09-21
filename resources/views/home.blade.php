@@ -42,9 +42,70 @@
           
           <x-search></x-search>
 
-          <div class="justify-content-center" id="pCards">
+          <div class="" id="pCards">
+            
+              @if ($contacts->count() > 0)
+                  
+                  @foreach ($contacts as $contact)
+                    
+                    {{-- col-5 col-s-12 px-1 bg-info --}}
+                      <div class="" id="cardContentp">
+                        <x-card :contact="$contact"></x-card>
+                      </div>
+                                                            
+                  @endforeach
 
-            <div class="row justify-content-between px-4 mb-3">
+              @else
+
+                <div class="row" id="calert">
+                  <div class="col-12">
+                    <x-alert class="alert alert-warning py-3 my-3 text-center">
+                      <i class="fa fa-info-circle" aria-hidden="true"></i> {{ 'NO CONTACTS REGISTERED' }}
+                    </x-alert>
+                  </div>
+                </div>
+                  
+              @endif
+
+          </div>
+
+          
+
+        </div>
+        
+      </div>
+
+    </div>
+
+
+</div>
+@endsection
+
+
+{{--
+            <div class="row justify-content-center px-4 mb-3">
+                            
+                @foreach ($contacts as $contact)
+
+                  @if (($contact->id_contact % 3) == 0)
+                    <div class="col-3 col-s-12 mx-auto my-2" id="cardContentp">
+                      <x-card :contact="$contact"></x-card>
+                    </div>
+                    <br>    
+                  @else
+                    <div class="col-3 col-s-12 mx-auto my-2" id="cardContentp">
+                      <x-card :contact="$contact"></x-card>
+                    </div>
+                  @endif
+                
+                @endforeach
+
+            </div>
+            --}}               
+
+
+            {{--
+            <div class="row justify-content-center px-4 mb-3">
               
               @if ($contacts->count() > 0)
                 @foreach ($contacts as $contact)
@@ -68,7 +129,7 @@
               @endif
 
             </div>
-
+            --}}
             {{-- 
             <div class="row justify-content-between px-4 mb-3">
               <div class="col-3 col-s-12 mx-auto my-2" id="cardContentp">
@@ -82,18 +143,3 @@
               </div>
             </div>
               --}}
-
-
-          </div>
-
-          
-
-        </div>
-        
-      </div>
-
-    </div>
-
-
-</div>
-@endsection

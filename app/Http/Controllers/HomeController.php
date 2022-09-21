@@ -28,9 +28,7 @@ class HomeController extends Controller
     public function index()
     {
         $current_user = Auth::user()->id_user;        
-        $contacts = Contact::where('id_user', '=', $current_user)->get();
-        
-        //$contacts = Contact::with(['phones', 'emails'])->get();        
+        $contacts = Contact::where('id_user', '=', $current_user)->get();   
         return view('home', compact('contacts'));
     }
            

@@ -10,6 +10,8 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 
+use function PHPUnit\Framework\isNull;
+
 class LoginController extends Controller
 {
     /*
@@ -45,12 +47,21 @@ class LoginController extends Controller
     protected function loginUser(Request $request){
 
         $user = User::where('email', '=', $request->lemail)->first();        
-        if(!Hash::check($request->lpassword, $user->password)){
-            dd('BAD CREDS MESSAGE LATER HERE');
-        }else{
-            Auth::login($user);
-            return redirect()->route('home');
+
+        if (is_null($user)) {
+            dd('User doesnt Exist');
+        }else {
+
+            if(!Hash::check($request->lpassword, $user->password)){
+                dd('BAD CREDS MESSAGE LATER HERE');
+            }else{
+                Auth::login($user);
+                return redirect()->route('home');
+            }
+
         }
+
+        
     
     }
 }

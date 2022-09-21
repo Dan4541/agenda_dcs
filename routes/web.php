@@ -21,13 +21,11 @@ Route::get('/', function () {
 });
 
 Auth::routes();
-
 Route::post('/login', [LoginController::class, 'loginUser'])->name('login');
 
 Route::group(['middleware' => ['auth']], function(){
 
-    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-    Route::get('/contacts', [ContactsController::class, 'index'])->name('icontacts');
+    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');    
     Route::post('/home', [ContactsController::class, 'store_contact'])->name('scontact');    
 });
 
