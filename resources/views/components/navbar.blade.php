@@ -12,12 +12,15 @@
         <div class="offcanvas-body">
           <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#">Home</a>
+              <a class="nav-link" aria-current="page" href="{{ route('home') }}">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" aria-current="page" href="#">Contact</a>
             </li>
-            <li class="nav-item d-flex justify-content-end">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="{{ route('uprofile') }}">Profile</a>
+            </li>
+            <li class="nav-item d-flex justify-content-end my-5">
                 <form action="{{ route('logout') }}" method="post">
                     @csrf
                     <button class="btn btn-danger text-end" type="submit">Log Out</button>

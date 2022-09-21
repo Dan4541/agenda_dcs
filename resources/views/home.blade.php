@@ -32,23 +32,22 @@
 
         @endif
 
-        <div class="col-3 col-s-10 mx-2 my-1 justify-content-center" id="pagendaform">
+        <div class="col-3 col-s-10 mx-2 my-1 justify-content-center rounded" id="pagendaform">
           
           <x-contactform></x-contactform>
           
         </div>
 
-        <div class="col-8 col-s-10 mx-2 my-1" id="pagendaContacts">
+        <div class="col-8 col-s-10 mx-2 my-1 rounded" id="pagendaContacts">
           
           <x-search></x-search>
 
-          <div class="" id="pCards">
+          <div class="rounded" id="pCards">
             
               @if ($contacts->count() > 0)
                   
                   @foreach ($contacts as $contact)
                     
-                    {{-- col-5 col-s-12 px-1 bg-info --}}
                       <div class="" id="cardContentp">
                         <x-card :contact="$contact"></x-card>
                       </div>
@@ -68,8 +67,6 @@
               @endif
 
           </div>
-
-          
 
         </div>
         
