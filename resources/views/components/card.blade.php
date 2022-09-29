@@ -1,16 +1,16 @@
 @props(['contact'])
-<div class="card" style="width: 11rem;">
+<div class="card" style="width: 12rem;">
   <img src="/img/img_falsa.png" class="card-img-top" alt="">
   <div class="card-body">
     
     <h5 class="card-title">{{ $contact->contact_name }}</h5>
-    <p class="card-text">
+    <p class="card-text ">
       @foreach ($contact->phones as $phone)
-          {{ $phone->phone_number }}
+          <em class="bg-warning">{{ $phone->phone_number }}</em>
       @endforeach
     </p>
     <hr class="bg-dark">
-    <p class="card-text">
+    <p class="card-text text-center">
       @foreach ($contact->emails as $email)
           {{$email->address}}
       @endforeach

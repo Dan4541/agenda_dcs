@@ -8,7 +8,7 @@
     
     <div class="board py-1">
 
-      <div class="row mx-4 my-3 py-5 justify-content-center" id="bgpanel">
+      <div class="row mx-4 my-3 py-5 justify-content-center rounded" id="bgpanel">
 
         @if (!empty($result))
 
@@ -77,66 +77,3 @@
 
 </div>
 @endsection
-
-
-{{--
-            <div class="row justify-content-center px-4 mb-3">
-                            
-                @foreach ($contacts as $contact)
-
-                  @if (($contact->id_contact % 3) == 0)
-                    <div class="col-3 col-s-12 mx-auto my-2" id="cardContentp">
-                      <x-card :contact="$contact"></x-card>
-                    </div>
-                    <br>    
-                  @else
-                    <div class="col-3 col-s-12 mx-auto my-2" id="cardContentp">
-                      <x-card :contact="$contact"></x-card>
-                    </div>
-                  @endif
-                
-                @endforeach
-
-            </div>
-            --}}               
-
-
-            {{--
-            <div class="row justify-content-center px-4 mb-3">
-              
-              @if ($contacts->count() > 0)
-                @foreach ($contacts as $contact)
-
-                  @if (($contact->id_contact % 3) == 0)
-                    <div class="col-3 col-s-12 mx-auto my-2" id="cardContentp">
-                      <x-card :contact="$contact"></x-card>
-                    </div>
-                    <br>    
-                  @else
-                    <div class="col-3 col-s-12 mx-auto my-2" id="cardContentp">
-                      <x-card :contact="$contact"></x-card>
-                    </div>
-                  @endif
-                
-                @endforeach
-              @else
-                <x-alert class="alert alert-warning py-3 my-3 text-center" id="calert">
-                  <i class="fa fa-info-circle" aria-hidden="true"></i> {{ 'NO CONTACTS REGISTERED' }}
-                </x-alert>
-              @endif
-
-            </div>
-            --}}
-            {{-- 
-            <div class="row justify-content-between px-4 mb-3">
-              <div class="col-3 col-s-12 mx-auto my-2" id="cardContentp">
-                <x-card></x-card>
-              </div>
-              <div class="col-3 col-s-12 mx-auto my-2" id="cardContentp">
-                <x-card></x-card>
-              </div>
-              <div class="col-3 col-s-12 mx-auto my-2" id="cardContentp">
-                <x-card></x-card>
-              </div>
-            </div>
-              --}}

@@ -50,8 +50,7 @@ background: #eee;
 }
 
 
-#bgpanel{
-  border-radius: 7%;
+#bgpanel{  
   background-color: #f4f6fc;
   box-shadow: 0 0 10px #000000;
 }
@@ -90,11 +89,40 @@ background: #eee;
 
 #pprofilecontent{
 
-  margin-top: 6rem;
-  /*border-radius: 7%;*/
+  margin-top: 7rem;
   background-color: #f4f6fc;
   box-shadow: 0 0 10px #000000;
 }
+
+#profile-left{
+background-color: #050a30;
+box-shadow: 0 0 10px #000000;
+height: 340px;
+}
+
+#profile-right{
+  background-color: #050a30;
+  box-shadow: 0 0 10px #000000;
+  height: 100%;
+}
+
+#pbtnsave{
+  text-align: right;
+}
+
+#profilecard{
+  width: 12rem;
+  
+}
+
+/*
+#pdisplayprofile{
+  -webkit-column-count: 2;
+  -moz-column-count: 2;
+  -o-column-count: 2;
+  height: 600px;
+}
+*/
 
 /*---------------------------------------------TOOLTIP TEXT------------------------------------*/
 
