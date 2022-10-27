@@ -51,7 +51,7 @@
                       <div class="" id="cardContentp">
                         <x-card :contact="$contact"></x-card>
                       </div>
-                                                            
+                                                                                  
                   @endforeach
 
               @else

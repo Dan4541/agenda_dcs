@@ -1,16 +1,27 @@
 @props(['contact'])
 <div class="card" style="width: 12rem;">
-  <img src="/img/img_falsa.png" class="card-img-top" alt="">
+  
+  @if (isset($contact->photo))
+  <img src="/img/{{$contact->photo}}" class="card-img-top" alt="">  
+  @else
+    <div id="photo_contact">
+      <label for="buttonfile">
+          <img src="/img/img_falsa.png" class="card-img-top" alt="">
+      </label>
+      <input type="file" id="buttonfile">
+    </div>
+  @endif
+
   <div class="card-body">
     
     <h5 class="card-title">{{ $contact->contact_name }}</h5>
     <p class="card-text ">
       @foreach ($contact->phones as $phone)
-          <em class="bg-warning">{{ $phone->phone_number }}</em>
+          <p id="numberslot">{{ $phone->phone_number }}</p>
       @endforeach
     </p>
     <hr class="bg-dark">
-    <p class="card-text text-center">
+    <p class="card-text">
       @foreach ($contact->emails as $email)
           {{$email->address}}
       @endforeach

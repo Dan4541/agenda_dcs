@@ -115,20 +115,47 @@ height: 340px;
   
 }
 
+#numberslot{
+  margin: 0%;
+}
+
+#saveicon{
+  font-size: 1.7em;
+}
+
+#photo_content{
+  display: contents; 
+}
+
+#photo_content label :hover{
+  cursor: pointer;
+}
+
 /*
-#pdisplayprofile{
-  -webkit-column-count: 2;
-  -moz-column-count: 2;
-  -o-column-count: 2;
-  height: 600px;
+#filebutton{
+  visibility: hidden;
+  height: 0px;
 }
 */
+#photo_contact{
+  display: contents;
+}
+
+#photo_contact label :hover{
+  cursor: pointer;
+}
+
+#buttonfile{
+  visibility: hidden;
+  height: 0px; 
+}
+
 
 /*---------------------------------------------TOOLTIP TEXT------------------------------------*/
 
 
 
-/*---------------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------------------*/
 
 
 [class*="col-"] {

@@ -9,9 +9,9 @@
 
     {{--  --}}
     <div class="col-s-2 col-1 mx-2 text-start">
-        <button class="btn btn-primary" type="button">
-            +
-        </button>    
+        <button class="btn btn-primary btn-sm" type="button">
+            <i class="fa fa-floppy-o" aria-hidden="true" id="saveicon"></i>
+        </button>
     </div>
         
     <div class="col-s-8 col-8 mx-2 text-end">
@@ -53,7 +53,7 @@
 
 <div class="row my-2 justify-content-center">
     <div class="col-5 col-s-5 justify-content-center d-grid">
-        <button class="btn btn-primary btn-lg text-center" type="submit">SAVE</button>
+        <button class="btn btn-primary btn-sm text-center" type="submit">SAVE</button>
     </div>
 </div>
 

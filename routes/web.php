@@ -29,5 +29,6 @@ Route::group(['middleware' => ['auth']], function(){
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');    
     Route::post('/home', [ContactsController::class, 'store_contact'])->name('scontact');
     Route::get('/profile', [ProfileController::class, 'index'])->name('uprofile');
+    Route::post('/profile', [ProfileController::class, 'upload_photo'])->name('savePhoto');
 });
 
